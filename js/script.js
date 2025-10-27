@@ -1,0 +1,33 @@
+////////////////////////////////
+////////////TRACCIA////////////
+////////////////////////////////
+// Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero (attraverso il prompt).
+// Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
+// il prezzo del biglietto è definito in base ai km (0.21 € al km) 
+// va applicato uno sconto del 20% per i minorenni
+// va applicato uno sconto del 40% per gli over 65.
+// L'output del prezzo finale va stampato in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
+// Questo richiederà un minimo di ricerca.
+
+// Prima di scrivere il codice impostate il ragionamento nei commenti!
+
+// Bonus:
+// Applicare dei controlli sull'input dell'utente
+
+// DATI DA CHIEDERE ALL'UTENTE (Prompt)
+// Chilometri da percorrere, età passegero
+
+// DATI A DISPOSIZIONE
+// Prezzo biglietto 0.21 al chilometro
+// sconto minorenni 20%;
+// sconto anziani 40%;
+
+//RAGIONAMENTO
+// Calcolo prezzo biglietto:
+// prezzo biglietto moltiplicato per chilometri.
+// Sconto:
+// sconto minorenni = prezzo biglietto * 0,20;
+// sconto anziani = prezzo biglietto * 0,40;
+// se età utente < 18 { prezzo biglietto - sconto minorenni }
+// else if età utente >= 65 { prezzo biglietto - sconto anziani }
+// else { nessuno sconto applicato }
