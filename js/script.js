@@ -35,14 +35,15 @@
 let chilometriDaPercorrere = prompt("Quanti chilomentri vuoi percorrere?");
 chilometriDaPercorrere = parseInt(chilometriDaPercorrere);
 
-let etaUtente = prompt("Quanti anni hai?");
-etaUtente = parseInt(etaUtente);
 
 if (isNaN(chilometriDaPercorrere)) {
     alert("Errore: devi inserire i chilometri che vuoi percorrere!");
 } else if (chilometriDaPercorrere < 1) {
     alert("I chilometri che hai inserito non sono validi!");
 } else {
+
+    let etaUtente = prompt("Quanti anni hai?");
+    etaUtente = parseInt(etaUtente);
 
     if (isNaN(etaUtente)) {
         alert("Errore: devi inserire la tua età!");
