@@ -34,13 +34,24 @@
 
 let chilometriDaPercorrere = prompt("Quanti chilomentri vuoi percorrere?");
 chilometriDaPercorrere = parseInt(chilometriDaPercorrere);
+if (isNaN(chilometriDaPercorrere)) {
+    alert("Errore: devi inserire i chilometri che vuoi percorrere!");
+} else if (chilometriDaPercorrere !== 1) {
+    alert("I chilometri che hai inserito non sono validi!");
+}
 console.log(chilometriDaPercorrere);
 
 let etaUtente = prompt("Quanti anni hai?");
 etaUtente = parseInt(etaUtente);
+if (isNaN(etaUtente)) {
+    alert("Errore: devi inserire la tua età!");
+} else if (etaUtente !== 1) {
+    alert("La tua età non è valida!");
+}
 console.log(etaUtente);
 
 let tariffaBase = chilometriDaPercorrere * 0.21;
+tariffaBase = tariffaBase.toFixed(2);
 console.log(`Il prezzo del tuo biglietto senza sconto è ${tariffaBase}€`);
 
 let scontoGiovani = tariffaBase * 0.20;
