@@ -31,3 +31,36 @@
 // se età utente < 18 { prezzo biglietto - sconto minorenni }
 // else if età utente >= 65 { prezzo biglietto - sconto anziani }
 // else { nessuno sconto applicato }
+
+let chilometriDaPercorrere = prompt("Quanti chilomentri vuoi percorrere?");
+chilometriDaPercorrere = parseInt(chilometriDaPercorrere);
+console.log(chilometriDaPercorrere);
+
+let etaUtente = prompt("Quanti anni hai?");
+etaUtente = parseInt(etaUtente);
+console.log(etaUtente);
+
+let tariffaBase = chilometriDaPercorrere * 0.21;
+console.log(`Il prezzo del tuo biglietto senza sconto è ${tariffaBase}€`);
+
+let scontoGiovani = tariffaBase * 0.20;
+let scontoAnziani = tariffaBase * 0.40;
+
+let prezzoScontato = "";
+
+if (etaUtente < 18) {
+    prezzoScontato = tariffaBase - scontoGiovani;
+
+
+} else if (etaUtente >= 65) {
+    prezzoScontato = tariffaBase - scontoAnziani;
+
+
+} else {
+    prezzoScontato = tariffaBase;
+
+}
+
+prezzoScontato = prezzoScontato.toFixed(2);
+
+console.log(`Il prezzo del tuo biglietto è ${prezzoScontato}€`);
